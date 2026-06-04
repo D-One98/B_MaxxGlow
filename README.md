@@ -1,20 +1,19 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# 🏭 Maxx Glow Paints - Official B2B Web Portal
+**Engineered by DivineTech**
 
-# Run and deploy your AI Studio app
+A modern, high-performance commercial B2B landing page developed exclusively for Belkhariya Maxx Glow Paints. Designed to showcase professional industrial coating catalogs and automate client lead generation securely.
 
-This contains everything you need to run your app locally.
+## ⚙️ The Tech Stack
+* **Frontend Core:** React.js + TypeScript (Vite)
+* **UI/UX Architecture:** Tailwind CSS (Custom Glassmorphism & Responsive Grids)
+* **Lead Pipeline:** Web3Forms API (Serverless Email Routing)
+* **Security Layer:** hCaptcha Integration (Anti-bot Protection)
 
-View your app in AI Studio: https://ai.studio/apps/ad86ebe6-c13f-4650-9e0f-e37635b0dea2
+## 🎯 Project Highlights
+* **Optimized Rendering:** Zero-lag automated hero sliders and smooth DOM transitions.
+* **B2B Focused:** Sticky enquiry tabs, floating direct-contact actions, and professional product specification cards.
+* **Secure Data Handling:** Environment-secured API keys and client-side validation.
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🔒 License & Status
+**Closed Source / Commercial Property**
+*This repository serves as a portfolio showcase of the architecture and code structure. The assets, branding, and proprietary source code are the intellectual property of Maxx Glow Paints and are not open for public contribution or cloning.*
