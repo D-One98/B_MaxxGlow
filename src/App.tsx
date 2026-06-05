@@ -1215,7 +1215,7 @@ export default function App() {
                   <Facebook className="w-4 h-4" />
                 </a>
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/bmaxxglowpaints/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
