@@ -319,9 +319,9 @@ export default function App() {
                 <Phone className="w-3.5 h-3.5 text-red-500" />
                 <span>+91 95984 25257</span>
               </a>
-              <a href="contactus@maxxglow.com" className="flex items-center gap-1.5 hover:text-red-500 transition-colors">
+              <a href="mailto:info@belkhariyabmaxxglow.com" className="flex items-center gap-1.5 hover:text-red-500 transition-colors">
                 <Mail className="w-3.5 h-3.5 text-red-500" />
-                <span>contactus@maxxglow.com</span>
+                <span>info@belkhariyabmaxxglow.com</span>
               </a>
             </div>
             <div className="flex items-center gap-4 text-[11px] uppercase tracking-wider text-slate-400">
@@ -1154,7 +1154,7 @@ export default function App() {
                     </div>
                     <div>
                       <p className="font-bold text-slate-900">Official Mail</p>
-                      <a href="mailto:contactus@maxxglow.com" className="text-red-650 font-semibold hover:underline">contactus@maxxglow.com</a>
+                      <a href="mailto:info@belkhariyabmaxxglow.com" className="text-red-650 font-semibold hover:underline">info@belkhariyabmaxxglow.com</a>
                     </div>
                   </div>
                 </div>
@@ -1252,8 +1252,8 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-red-500 flex-shrink-0" />
-                  <a href="mailto:contactus@maxxglow.com" className="hover:text-white transition-colors">
-                    contactus@maxxglow.com
+                  <a href="mailto:info@belkhariyabmaxxglow.com" className="hover:text-white transition-colors">
+                    info@belkhariyabmaxxglow.com
                   </a>
                 </li>
                 <li className="flex items-center gap-3">
@@ -1332,7 +1332,7 @@ export default function App() {
 
           {/* Bottom Bar copyright info */}
           <div className="pt-10 flex flex-col sm:flex-row justify-between items-center gap-5 text-[11px] text-slate-500 font-light">
-            <span>© 2026 Belkhariya Enterprise. All rights reserved.</span>
+            <span>© 2026 Maxx Glow. All Rights Reserved. | Designed & Developed by DivineTech</span>
             <div className="flex gap-6 uppercase tracking-wider">
               <a href="#" onClick={(e) => { e.preventDefault(); handleEnquiryClick("Privacy Policy"); }} className="hover:text-slate-350 transition-colors">Privacy Policy</a>
               <a href="#" onClick={(e) => { e.preventDefault(); handleEnquiryClick("B2B terms"); }} className="hover:text-slate-350 transition-colors">Terms of Supply</a>
