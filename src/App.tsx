@@ -37,7 +37,7 @@ interface LogoProps {
 
 const BelkhariyaLogo: React.FC<LogoProps> = ({ className = "w-11 h-11" }) => (
   <img 
-    src="src\assets\Gemini_Generated_Image_krfzvpkrfzvpkrfz.jpg" 
+    src="/Gemini_Generated_Image_krfzvpkrfzvpkrfz.jpg" 
     alt="Belkhariya Maxx Glow Logo" 
     className={`${className} object-contain shrink-0 rounded-md`} 
   />
@@ -78,7 +78,7 @@ const PRODUCTS: Product[] & { image: string; imageAlt: string }[] = [
       coates: "1 - 2 Coats"
     },
     // Added image paths
-    image: "src/assets/primer.png", 
+    image: "/primer.png", 
     imageAlt: "Cement Primer Buckets"
   },
   {
@@ -99,7 +99,7 @@ const PRODUCTS: Product[] & { image: string; imageAlt: string }[] = [
       coates: "2 Coats recommended"
     },
     // Added image paths
-    image: "src/assets/distemper.png",
+    image: "/distemper.png",
     imageAlt: "Acrylic Distemper Buckets"
   },
   {
@@ -119,7 +119,7 @@ const PRODUCTS: Product[] & { image: string; imageAlt: string }[] = [
       finish: "Superb Soft Sheen",
       coates: "2 Coats"
     },
-    image: "src/assets/waterpaint.png", 
+    image: "/waterpaint.png", 
     imageAlt: "Water Thinnable Paint"
   },
   {
@@ -140,7 +140,7 @@ const PRODUCTS: Product[] & { image: string; imageAlt: string }[] = [
       coates: "2 - 3 Coats for extreme durability"
     },
     // Added image paths
-    image: "src/assets/emulsion.png",
+    image: "/emulsion.png",
     imageAlt: "Emulsion Coat Buckets"
   }
 ];
@@ -152,7 +152,7 @@ const HERO_SLIDES = [
     alt: "Vibrant red Belkhariya Maxx Glow formulation being painted by a professional on site"
   },
   {
-    url: "src/assets/Gemini_Generated_Image_ge43otge43otge43.png",
+    url: "/Gemini_Generated_Image_ge43otge43otge43.png",
     alt: "Slide 2: High efficiency protective coating application on architectural surfaces"
   },
   {
@@ -200,16 +200,13 @@ export default function App() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // 🛡️ Ensure hCaptcha is checked
     if (!captchaToken) {
       alert("Please complete the Security Check!");
       return;
     }
 
-    // 1. Prepare the data payload for Web3Forms
     const payload = {
-      access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY, // <-- Apni actual key rakhna
+      access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
       subject: `New B2B Lead: ${formData.fullName} - Maxx Glow Paints`,
       from_name: formData.fullName,
       email: formData.email,
@@ -754,7 +751,7 @@ export default function App() {
                 
                 <img 
                   className="w-full h-full object-cover"
-                  src="src/assets/quality.png"
+                  src="/quality.png"
                   alt="Industrial Testing and Chemical Lab QC of Paint Coatings"
                   referrerPolicy="no-referrer"
                 />
