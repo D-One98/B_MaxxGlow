@@ -1204,36 +1204,58 @@ export default function App() {
               </p>
 
               {/* Social Media Squares */}
-              <div className="flex items-center gap-3">
-                <a 
-                  href="https://www.facebook.com/people/MaxxGlow-Paint/61585381097052/#" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
-                  aria-label="Follow us on Facebook"
+            <div className="flex items-center gap-3">
+              <a 
+                href="https://www.facebook.com/people/MaxxGlow-Paint/61585381097052/#" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
+                aria-label="Follow us on Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              
+              <a 
+                href="https://www.instagram.com/bmaxxglowpaints/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
+                aria-label="Follow us on Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              
+              <a 
+                href="https://www.linkedin.com/in/belkhariya-paints" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
+                aria-label="Follow us on LinkedIn"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+
+              {/* X (Twitter) Icon - perfectly aligned with the square theme */}
+              <a 
+                href="https://x.com/MaxxGlowPaints" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
+                aria-label="Follow us on X"
+              >
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  viewBox="0 0 24 24" 
+                  fill="currentColor"
+                  className="w-4 h-4"
                 >
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a 
-                  href="https://www.instagram.com/bmaxxglowpaints/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
-                  aria-label="Follow us on Instagram"
-                >
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a 
-                  href="https://linkedin.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
-                  aria-label="Follow us on LinkedIn"
-                >
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
             </div>
+
+            </div>
+
 
             {/* Column 2: Get in Touch (Location marker, email, phone) */}
             <div className="lg:col-span-3 flex flex-col gap-5">
