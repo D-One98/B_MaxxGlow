@@ -1216,7 +1216,7 @@ export default function App() {
               </a>
               
               <a 
-                href="https://www.instagram.com/bmaxxglowpaints/" 
+                href="https://www.instagram.com/maxxglowpaints/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-9 h-9 bg-slate-900 hover:bg-red-600 text-white rounded transition-colors flex items-center justify-center border border-slate-800"
