@@ -212,9 +212,9 @@ export default function App() {
   const [spotlightSlide, setSpotlightSlide] = useState(0);
   const SPOTLIGHT_IMAGES = [
     "/waterpaint.png", 
-    "/waterpaint-side.png", 
-    "/waterpaint-wall.png", 
-    "/waterpaint-action.png" 
+    "/PHOTO1.png", 
+    "/PHOTO2.png", 
+    "/PHOTO3.png" 
   ];
 
   useEffect(() => {
