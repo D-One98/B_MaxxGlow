@@ -774,9 +774,9 @@ export default function App() {
             {PRODUCTS.map((prod, index) => {
               const icons = [
                 <ShieldCheck className="w-5 h-5 text-red-600" />,
-                <Paintbrush className="w-5 h-5 text-amber-500" />,
                 <Droplets className="w-5 h-5 text-emerald-600" />,
                 <Sun className="w-5 h-5 text-indigo-600" />,
+                <Paintbrush className="w-5 h-5 text-amber-500" />,
                 <Sparkles className="w-5 h-5 text-sky-500" />,
                 <Building className="w-5 h-5 text-purple-600" />
               ];
