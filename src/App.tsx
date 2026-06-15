@@ -1489,23 +1489,32 @@ export default function App() {
                 </li>
                 <li>
                   <button onClick={() => scrollToSection('products')} className="hover:text-white text-left transition-colors flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Acrylic Distemper
+                    <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Acrylic Distemper
                   </button>
                 </li>
                 <li>
                   <button onClick={() => scrollToSection('products')} className="hover:text-white text-left transition-colors flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></span> Water Thinnable Paint
+                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Water Thinnable Paint
                   </button>
                 </li>
                 <li>
                   <button onClick={() => scrollToSection('products')} className="hover:text-white text-left transition-colors flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 bg-indigo-500 rounded-full"></span> Emulsion Coat (Int/Ext)
+                    <span className="w-1.5 h-1.5 bg-purple-500 rounded-full"></span> Emulsion Coat (Int/Ext)
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollToSection('products')} className="hover:text-white text-left transition-colors flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 bg-amber-500 rounded-full"></span> Waterproof Wall Putty
+                  </button>
+                </li>
+                <li>
+                  <button onClick={() => scrollToSection('products')} className="hover:text-white text-left transition-colors flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full"></span> White Cement Putty
                   </button>
                 </li>
               </ul>
             </div>
-
-          </div>
+            </div>
 
           {/* Bottom Bar copyright info */}
           <div className="pt-10 flex flex-col sm:flex-row justify-between items-center gap-5 text-[11px] text-slate-500 font-light">
