@@ -1,9 +1,11 @@
-/**
+/** Developed by Divintech for Belkhariya Maxx Glow - 2026
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
+
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import React, { useState, useEffect } from 'react';
+import { Zap } from 'lucide-react';
 import { 
   Phone, 
   Mail, 
@@ -80,6 +82,46 @@ const PRODUCTS: Product[] & { image: string; imageAlt: string }[] = [
     // Added image paths
     image: "/primer.png", 
     imageAlt: "Cement Primer Buckets"
+  },
+  {
+    id: "wp-universal",
+    name: "Waterproof Universal Wall Putty",
+    tagline: "Ultimate Moisture Barrier",
+    description: "Premium white cement-based putty infused with advanced water-repellent polymers. Engineered to provide a 100% waterproof shield and a glass-smooth finish, eliminating dampness and extending topcoat life in extreme weather.",
+    features: [
+      "Active water-repellent molecular structure",
+      "Exceptional whiteness & ultra-smooth finish",
+      "Significantly reduces topcoat paint consumption",
+      "Zero curing required after application"
+    ],
+    specs: {
+      coverage: "15 - 20 sq.ft / kg / 2 Coats",
+      dilution: "35% - 40% water by weight",
+      finish: "Ultra Smooth White",
+      coates: "2 Coats recommended"
+    },
+    image: "/waterproof.png", 
+    imageAlt: "Waterproof Wall Putty Bag"
+  },
+  {
+    id: "white-cement-putty",
+    name: "White Cement Based Wall Putty",
+    tagline: "Professional Grade Base",
+    description: "High-grade white cement putty designed to fill fine pores in concrete and plaster. It creates a highly breathable, superior-adhesion base layer that prevents flaking and perfectly anchors premium commercial topcoats.",
+    features: [
+      "Excellent bonding strength to plaster surfaces",
+      "Prevents flaking and peeling of expensive paints",
+      "Highly durable and breathable layer",
+      "Cost-effective solution for bulk housing projects"
+    ],
+    specs: {
+      coverage: "18 - 22 sq.ft / kg / 2 Coats",
+      dilution: "35% - 40% clean water",
+      finish: "Smooth Matte White",
+      coates: "2 Coats"
+    },
+    image: "/putty.png", 
+    imageAlt: "White Cement Wall Putty Bag"
   },
   {
     id: "acrylic-distemper",
@@ -167,6 +209,20 @@ export default function App() {
   const [selectedProduct, setSelectedProduct] = useState("");
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [spotlightSlide, setSpotlightSlide] = useState(0);
+  const SPOTLIGHT_IMAGES = [
+    "/waterpaint.png", 
+    "/waterpaint-side.png", 
+    "/waterpaint-wall.png", 
+    "/waterpaint-action.png" 
+  ];
+
+  useEffect(() => {
+    const spotlightTimer = setInterval(() => {
+      setSpotlightSlide((prev) => (prev + 1) % SPOTLIGHT_IMAGES.length);
+    }, 3500);
+    return () => clearInterval(spotlightTimer);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -213,7 +269,7 @@ export default function App() {
       phone: formData.phone,
       product_interested: selectedProduct || "General Inquiry",
       client_message: formData.message,
-      "h-captcha-response": captchaToken // <-- WEB3FORMS KO YE CHAHIYE
+      "h-captcha-response": captchaToken
     };
 
     try {
@@ -314,7 +370,7 @@ export default function App() {
             <div className="flex flex-wrap justify-center items-center gap-x-5 gap-y-1">
               <a href="tel:+919598425257" className="flex items-center gap-1.5 hover:text-red-500 transition-colors">
                 <Phone className="w-3.5 h-3.5 text-red-500" />
-                <span>+91 95984 25257</span>
+                <span>Contact Our Chief Executive Officer</span>
               </a>
               <a href="mailto:info@belkhariyabmaxxglow.com" className="flex items-center gap-1.5 hover:text-red-500 transition-colors">
                 <Mail className="w-3.5 h-3.5 text-red-500" />
@@ -504,6 +560,104 @@ export default function App() {
         </div>
       </section>
 
+      {/* ============================================================== */}
+      {/* THE NEW KHATARNAAK SPOTLIGHT SECTION: WATER THINNABLE ENAMEL */}
+      {/* ============================================================== */}
+      <section className="relative py-24 bg-slate-950 overflow-hidden border-t-4 border-red-600">
+        {/* Dynamic Background Elements */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-red-600/10 blur-[120px] rounded-full pointer-events-none translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#1a4fbf]/10 blur-[150px] rounded-full pointer-events-none -translate-x-1/3 translate-y-1/3"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left Typography & Features */}
+            <div className="order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/5 border border-white/10 text-slate-300 rounded-full text-xs font-semibold uppercase tracking-widest mb-6">
+                <Zap className="w-4 h-4 text-red-500" /> Flagship Advertising Formulation
+              </div>
+              
+              <h2 className="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-tight mb-6">
+                WATER THINNABLE <br/>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">ENAMEL COLORS</span>
+              </h2>
+              
+              <p className="text-slate-300 text-lg leading-relaxed mb-8 max-w-lg font-light">
+                The absolute pinnacle of commercial advertising paint. Achieve hyper-vibrant, non-fading wall murals and commercial hoardings with our rapid-drying, eco-friendly water base. No harsh solvents needed.
+              </p>
+
+              <div className="space-y-4 mb-10">
+                <div className="flex items-center gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
+                  <div className="bg-red-600/20 text-red-500 p-2.5 rounded-lg"><Droplets className="w-5 h-5"/></div>
+                  <div>
+                    <h4 className="text-white font-bold text-sm">100% Water Soluble</h4>
+                    <p className="text-slate-400 text-xs mt-0.5">Mixes smoothly with potable water, eliminating toxic thinners.</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4 bg-white/5 border border-white/10 p-4 rounded-xl">
+                  <div className="bg-red-600/20 text-red-500 p-2.5 rounded-lg"><Sun className="w-5 h-5"/></div>
+                  <div>
+                    <h4 className="text-white font-bold text-sm">Anti-Fading Pigmentation</h4>
+                    <p className="text-slate-400 text-xs mt-0.5">Locks in bright reds, blues, and yellows even under harsh UV rays.</p>
+                  </div>
+                </div>
+              </div>
+
+              <button
+                onClick={() => handleEnquiryClick("Water Thinnable Enamel Paint - Bulk")}
+                className="bg-red-600 hover:bg-red-700 text-white font-bold text-sm tracking-wider uppercase px-8 py-4.5 rounded-lg shadow-[0_0_20px_rgba(220,38,38,0.3)] hover:shadow-[0_0_30px_rgba(220,38,38,0.5)] transition-all duration-300 flex items-center gap-2 group"
+              >
+                Get Advertising Bulk Rates
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+              </button>
+            </div>
+
+            {/* Right Dynamic Product Display (WITH CAROUSEL) */}
+            <div className="order-1 lg:order-2 relative flex flex-col items-center justify-center">
+              {/* Spinning/Glowing ring effect behind the product */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                <div className="w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] border border-red-500/20 rounded-full animate-[spin_10s_linear_infinite] border-t-red-600"></div>
+                <div className="absolute w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] border border-slate-700/50 rounded-full animate-[spin_15s_linear_infinite_reverse] border-b-[#1a4fbf]"></div>
+              </div>
+              
+              {/* The Image Carousel Box */}
+              <div className="relative z-10 w-full max-w-sm lg:max-w-md aspect-square flex items-center justify-center">
+                {SPOTLIGHT_IMAGES.map((imgSrc, index) => (
+                  <img 
+                    key={index}
+                    src={imgSrc}
+                    alt={`Water Thinnable Enamel Showcase ${index + 1}`}
+                    className={`absolute inset-0 w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-700 ease-in-out ${
+                      index === spotlightSlide ? "opacity-100 scale-105" : "opacity-0 scale-95 pointer-events-none"
+                    }`}
+                  />
+                ))}
+              </div>
+              {/* Pagination Dots for Carousel */}
+              <div className="relative z-20 flex gap-2 mt-6">
+                {SPOTLIGHT_IMAGES.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSpotlightSlide(index)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      index === spotlightSlide ? "bg-red-500 w-8" : "bg-white/20 hover:bg-white/50 w-2"
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+              
+              {/* Floating Spec Tag */}
+              <div className="absolute bottom-16 right-0 sm:-right-4 z-20 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl shadow-2xl animate-bounce" style={{animationDuration: '3s'}}>
+                <div className="text-red-400 text-[10px] font-bold uppercase tracking-widest mb-1">Coverage</div>
+                <div className="text-white font-mono font-bold text-lg">150 sq.ft/L</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      {/* ============================================================== */}
       {/* SHORT SECTION ABOUT BRAND WITH DUAL PROFILES */}
       <section id="about" className="py-24 bg-white border-b border-slate-100 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -622,13 +776,17 @@ export default function App() {
                 <ShieldCheck className="w-5 h-5 text-red-600" />,
                 <Paintbrush className="w-5 h-5 text-amber-500" />,
                 <Droplets className="w-5 h-5 text-emerald-600" />,
-                <Sun className="w-5 h-5 text-indigo-600" />
+                <Sun className="w-5 h-5 text-indigo-600" />,
+                <Sparkles className="w-5 h-5 text-sky-500" />,
+                <Building className="w-5 h-5 text-purple-600" />
               ];
               const borderColors = [
                 "border-l-4 border-l-red-600",
                 "border-l-4 border-l-amber-500",
                 "border-l-4 border-l-emerald-500",
-                "border-l-4 border-l-indigo-500"
+                "border-l-4 border-l-indigo-500",
+                "border-l-4 border-l-sky-500",    
+                "border-l-4 border-l-purple-600"
               ];
 
               return (
@@ -1140,7 +1298,7 @@ export default function App() {
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="font-bold text-slate-900">Direct Hotline</p>
+                      <p className="font-bold text-slate-900">Mr. SK Soni (CEO)</p>
                       <a href="tel:+919598765432" className="text-red-650 font-semibold hover:underline">+91 95987 65432</a>
                     </div>
                   </div>
