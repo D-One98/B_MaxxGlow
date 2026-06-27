@@ -1299,7 +1299,7 @@ export default function App() {
                     </div>
                     <div>
                       <p className="font-bold text-slate-900">Mr. SK Soni (CEO)</p>
-                      <a href="tel:+919598765432" className="text-red-650 font-semibold hover:underline">+91 95987 65432</a>
+                      <a href="tel:+91 95984 25257" className="text-red-650 font-semibold hover:underline">+91 95984 25257</a>
                     </div>
                   </div>
 
@@ -1435,8 +1435,8 @@ export default function App() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-red-500 flex-shrink-0" />
-                  <a href="tel:+919598765432" className="hover:text-white transition-colors">
-                    +91 95987 65432
+                  <a href="tel:+91 95984 25257" className="hover:text-white transition-colors">
+                    +91 95984 25257
                   </a>
                 </li>
               </ul>
